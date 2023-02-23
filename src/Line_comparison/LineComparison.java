@@ -25,7 +25,7 @@ public class LineComparison {
 
         // co-ordinates of point 4
         double x4 = 40;
-        double y4 = 40g;
+        double y4 = 40;
 
         double length1 = Math.sqrt((Math.pow((x2 - x1), 2)) + Math.pow((y2 - y1), 2));
         // FORMULA : Length of a Line = sqrt( (x2 - x1) ^ 2 + (y2- y1) ^ 2)
@@ -38,6 +38,15 @@ public class LineComparison {
 
         boolean result = Objects.equals(length1, length2);
         System.out.println("BOTH LINES ARE EQUAL " + result);
+        int obj = Double.compare(length1,length2);
+        if (obj == 0) {
+            System.out.println("Both lines are same");
+        } else if (obj > 0) {
+            System.out.println("Line 1 is Greater");
+
+        } else {
+            System.out.println("Line 2 is Greater");
+        }
     }
 }
 
